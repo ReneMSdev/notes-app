@@ -1,4 +1,4 @@
-import AddModal from '@/app/components/AddModal'
+import AddModal from '@/app/components/AddNoteModal'
 import NoteList from '@/app/components/NoteList'
 import { useState } from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
@@ -26,9 +26,10 @@ export default function NoteScreen() {
   return (
     <>
       <View style={styles.container}>
+        {/* Note List */}
         <NoteList notes={notes} />
 
-        {/* Add Button */}
+        {/* Add Note Button */}
         <TouchableOpacity
           style={styles.addButton}
           onPress={() => setModalVisible(true)}
@@ -37,6 +38,7 @@ export default function NoteScreen() {
         </TouchableOpacity>
       </View>
 
+      {/* Add Note Modal */}
       <AddModal
         modalVisible={modalVisible}
         setModalVisible={setModalVisible}

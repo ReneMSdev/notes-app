@@ -1,6 +1,12 @@
 import { Modal, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 
-export default function AddModal({ modalVisible, setModalVisible, newNote, setNewNote, addNote }) {
+export default function AddNoteModal({
+  modalVisible,
+  setModalVisible,
+  newNote,
+  setNewNote,
+  addNote,
+}) {
   return (
     <Modal
       visible={modalVisible}
